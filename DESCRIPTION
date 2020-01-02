@@ -1,0 +1,14 @@
+Package: genemodules
+Title: Discover highly correlated gene sets
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Andrew",
+           family = "Biedermann",
+           role = c("aut", "cre"),
+           email = "biederma@mit.edu")
+Description: Discover highly correlated gene sets.
+License: GNU General Public License v3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
