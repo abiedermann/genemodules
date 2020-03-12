@@ -1,6 +1,8 @@
 #' Gene module discovery algorithm (fast implementation)
 get_gene_modules <- function(this.matrix,this.tree=as.phylo(hclust(parDist(this.matrix)))){
-  # this.matrix is a gene correlation matrix
+  library(data.tree)
+  library(ape)
+# this.matrix is a gene correlation matrix
   
   # Note: the fast implementation avoids recalculating all significance scores on each iterations
   # and only updates parents of the trimmed node
