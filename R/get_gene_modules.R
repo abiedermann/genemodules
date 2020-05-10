@@ -6,7 +6,7 @@ get_gene_modules <- function(this.matrix,this.tree=as.phylo(hclust(parDist(this.
   
   # Note: the fast implementation avoids recalculating all significance scores on each iterations
   # and only updates parents of the trimmed node
-  
+
   # Accounting for the fact that data.trees seems to replace _ with spaces
   mod.list <- list()
   mod.zscores <- c()

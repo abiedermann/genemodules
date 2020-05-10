@@ -30,9 +30,7 @@ assign_cluster_numbers <- function(this.gm,this.cor,alpha=0.05){
   for(i in 1:length(initial.nums)){
       final.nums[i] <- mean(this.cor[this.genes[names(this.genes)==1],this.genes[names(this.genes)==initial.nums[i]]])
   }
-  print(initial.nums)
-  print(final.nums)
-  print(order(final.nums,decreasing=T))
+  
   # Renaming clusters
   this.names <- names(this.genes)
   new.names <- this.names
@@ -40,6 +38,8 @@ assign_cluster_numbers <- function(this.gm,this.cor,alpha=0.05){
       new.names[this.names==initial.nums[order(final.nums,decreasing=T)[i]]] = i
   }
   names(this.genes) <- new.names
+
+  this.genes <- this.genes[order(names(this.genes))]
 
   return(this.genes)
 }
