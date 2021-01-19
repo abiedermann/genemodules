@@ -39,7 +39,7 @@ assign_cluster_numbers <- function(this.gm,this.cor,alpha=0.05){
   }
   names(this.genes) <- new.names
 
-  this.genes <- this.genes[order(names(this.genes))]
+  this.genes <- this.genes[order(as.numeric(names(this.genes)))]
 
   return(this.genes)
 }

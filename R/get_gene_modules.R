@@ -15,7 +15,6 @@ get_gene_modules <- function(this.matrix,this.tree=as.phylo(hclust(parDist(this.
   this.sd <- bootstrap_baselines(this.matrix,200)
 
   test.out <- this.tree$Get(function(x) get_subtree_zscore(x,this.matrix,this.sd),filterFun=function(x) isNotLeaf(x))
-  
   while(TRUE){
     # Find node to delete
     node.name <- FindNode(this.tree,names(which(test.out==max(test.out))))
